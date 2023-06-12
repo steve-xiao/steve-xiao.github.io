@@ -5,112 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ran "Steven" Xiao</title>
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Noto Serif', serif;
-            line-height: 1.6;
-            color: #3c3c3c;
-            background-color: #e8ebeb;
-        }
-
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            overflow: auto;
-            padding: 0 30px;
-        }
-
-        header {
-            background-color: #a3a092;
-            padding: 1rem;
-            border-bottom: 3px solid #6c6a56;
-        }
-
-        header h1 {
-            color: #333;
-            text-align: center;
-            text-transform: uppercase;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: space-around;
-            list-style: none;
-            background-color: #a3a092;
-            border-bottom: 3px solid #6c6a56;
-        }
-
-        nav ul li a {
-            color: #333;
-            text-decoration: none;
-            padding: 0.7rem;
-            display: block;
-        }
-
-        nav ul li a:hover,
-        .active {
-            background-color: #e8ebeb;
-            color: #333;
-        }
-
-        .section {
-            padding: 3rem;
-            text-align: center;
-            background-color: rgba(226, 230, 226, 0.8);
-            border-bottom: 1px solid #6c6a56;
-        }
-
-        .section h2 {
-            font-size: 36px;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-        }
-
-        .section p {
-            font-size: 18px;
-            margin-bottom: 1rem;
-            text-indent: 2em;
-        }
-
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
-        .gallery img {
-            width: 32%;
-            height: auto;
-            margin-bottom: 1rem;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-        }
-
-        footer {
-            background-color: #a3a092;
-            color: #333;
-            text-align: center;
-            padding: 1.5rem;
-            border-top: 3px solid #6c6a56;
-        }
-    </style>
-    <script>
-        function setActiveLink(event) {
-            const navItems = document.querySelectorAll('nav ul li a');
-            navItems.forEach(item => {
-                if (item.classList.contains('active')) {
-                    item.classList.remove('active');
-                }
-            });
-            event.target.classList.add('active');
-        }
-    </script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -118,34 +13,17 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#resume" onclick="setActiveLink(event)" class="active">Resume</a></li>
-            <li><a href="#gallery" onclick="setActiveLink(event)">Gallery</a></li>
-            <li><a href="#interests" onclick="setActiveLink(event)">Interests</a></li>
+            <li><a href="#" data-page="resume" class="nav-link active">Resume</a></li>
+            <li><a href="#" data-page="gallery" class="nav-link">Gallery</a></li>
+            <li><a href="#" data-page="interests" class="nav-link">Interests</a></li>
         </ul>
     </nav>
-    <section id="resume" class="section">
-        <h2>Resume</h2>
-        <p><a href="resume.pdf" target="_blank">Download Resume</a></p>
-    </section>
-    <section id="gallery" class="section">
-        <h2>Gallery</h2>
-        <div class="gallery">
-            <img src="img1.jpg" alt="">
-            <img src="img2.jpg" alt="">
-            <img src="img3.jpg" alt="">
-            <img src="img4.jpg" alt="">
-            <img src="img5.jpg" alt="">
-            <img src="img6.jpg" alt="">
-        </div>
-    </section>
-    <section id="interests" class="section">
-        <h2>Interests</h2>
-        <p>Science Fiction</p>
-        <p>Classic Rock</p>
-        <p>Visual Novels</p>
-    </section>
+    <div id="content" class="section">
+        <!-- Dynamic content will load here -->
+    </div>
     <footer>
         &copy; Ran "Steven" Xiao
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
