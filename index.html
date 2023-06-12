@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ran "Steven" Xiao</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            overflow: auto;
+            padding: 0 30px;
+        }
+
+        header {
+            background-color: #333;
+            padding: 1rem;
+        }
+
+        header h1 {
+            color: #f0f0f0;
+            text-align: center;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            padding: 0.7rem;
+            display: block;
+        }
+
+        nav ul li a:hover,
+        .active {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .section {
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 36px;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            font-size: 18px;
+            margin-bottom: 1rem;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .gallery img {
+            width: 32%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 1.5rem;
+        }
+    </style>
+    <script>
+        function setActiveLink(event) {
+            const navItems = document.querySelectorAll('nav ul li a');
+            navItems.forEach(item => {
+                if (item.classList.contains('active')) {
+                    item.classList.remove('active');
+                }
+            });
+            event.target.classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Ran "Steven" Xiao</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#resume" onclick="setActiveLink(event)" class="active">Resume</a></li>
+            <li><a href="#gallery" onclick="setActiveLink(event)">Gallery</a></li>
+            <li><a href="#interests" onclick="setActiveLink(event)">Interests</a></li>
+        </ul>
+    </nav>
+    <section id="resume" class="section">
+        <h2>Resume</h2>
+        <p><a href="resume.pdf" target="_blank">Download Resume</a></p>
+    </section>
+    <section id="gallery" class="section">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="img1.jpg" alt="">
+            <img src="img2.jpg" alt="">
+            <img src="img3.jpg" alt="">
+            <img src="img4.jpg" alt="">
+            <img src="img5.jpg" alt="">
+            <img src="img6.jpg" alt="">
+        </div>
+    </section>
+    <section id="interests" class="section">
+        <h2>Interests</h2>
+        <p>Science Fiction</p>
+        <p>Classic Rock</p>
+        <p>Visual Novels</p>
+    </section>
+    <footer>
+        &copy; Ran "Steven" Xiao
+    </footer>
+</body>
+</html>
