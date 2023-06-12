@@ -56,6 +56,7 @@ nav ul li a:hover,
     text-align: center;
     background-color: rgba(226, 230, 226, 0.8);
     border-bottom: 1px solid #6c6a56;
+    transition: all 0.5s ease;
 }
 
 .section h2 {
