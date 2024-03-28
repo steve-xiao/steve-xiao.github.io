@@ -20,12 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     async function loadPageContent(page) {
-        content.classList.add('section-hidden');
+        content.style.opacity = '0';
         const response = await fetch(`${page}.html`);
         const html = await response.text();
         setTimeout(() => {
             content.innerHTML = html;
-            content.classList.remove('section-hidden');
+            content.style.opacity = '1';
         }, 500);
     }
   
